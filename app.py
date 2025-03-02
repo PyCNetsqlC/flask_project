@@ -46,7 +46,7 @@ def totalhours():
             
             total_hournum2 += (hour_num2+min_num2)
 
-        result = total_hournum1 + total_hournum2
+        result = abs(total_hournum1 - total_hournum2)
         return render_template("home.html",result=str(result))
     return render_template("home.html")
 
