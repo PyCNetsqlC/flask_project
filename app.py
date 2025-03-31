@@ -9,14 +9,15 @@ def totalhours():
         num1 = request.form['num1']
         num2 = request.form['num2']
 
+        num1 = "32,12.5,12.3"
+        num2 = "12,22,11"
         num1 = num1.split(",")
         num2 = num2.split(",")
 
         total_hournum1,total_hournum2 = [],[]
 
         for i in num1:
-            i = float(i)
-            i = str(i)
+            i = f"{float(i):.2f}"
             hour_num1 = float(i[:i.find(".")])
             min_num1 = float(i[i.find(".")+1:len(i)])
 
@@ -33,8 +34,7 @@ def totalhours():
             total_hournum1.append(hour_num1+min_num1)
 
         for j in num2:
-            j = float(j)
-            j = str(j)
+            j = f"{float(j):.2f}"
             hour_num2 = float(j[:j.find(".")])
             min_num2 = float(j[j.find(".")+1:len(j)])
 
