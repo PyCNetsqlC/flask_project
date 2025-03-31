@@ -8,9 +8,7 @@ def totalhours():
     if request.method=="POST":
         num1 = request.form['num1']
         num2 = request.form['num2']
-
-        num1 = "32,12.5,12.3"
-        num2 = "12,22,11"
+        
         num1 = num1.split(",")
         num2 = num2.split(",")
 
