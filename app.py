@@ -15,8 +15,8 @@ def totalhours():
         total_hournum1,total_hournum2 = [],[]
 
         for i in num1:
-            hour_num1 = int(i[:i.find(".")])
-            min_num1 = int(i[i.find(".")+1:len(i)])
+            hour_num1 = float(i[:i.find(".")])
+            min_num1 = float(i[i.find(".")+1:len(i)])
 
             if min_num1>=0 and min_num1<15:
                 min_num1 = 0
